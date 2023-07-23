@@ -1,0 +1,109 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Slab:wght@300;400;500&display=swap');
+
+/* css resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* general styling */
+:root {
+  --light-clr-1: #fff;
+  --dark-clr-1: #222;
+  --special-clr-1: #4b3ae0;
+  --h1: 10rem;
+  --fs-big: 5rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto Slab', serif;
+  background-color: var(--dark-clr-1);
+}
+
+.drum-kit-heading {
+  font-size: var(--h1);
+  font-family: 'Lobster', cursive;
+  color: var(--light-clr-1);
+  text-align: center;
+  padding: 2rem 1rem;
+  text-shadow: 2px 2px 0 var(--special-clr-1);
+}
+
+.drum-kit-container {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.drum-kit-container > div {
+  flex: calc(100% / 4 - 1rem);
+  text-align: center;
+}
+
+.drum {
+  background-color: var(--light-clr-1);
+  font-size: var(--fs-big);
+  font-weight: bold;
+  text-shadow: 2px 2px 0 var(--special-clr-1);
+  padding: 1rem;
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  border: 10px solid var(--special-clr-1);
+  margin-bottom: 2rem;
+  transition: 0.3s ease-in-out all;
+}
+
+.drum:focus {
+  outline: none;
+}
+
+.animation {
+  transform: skew(10deg);
+}
+
+@media (max-width: 650px) {
+  :root {
+    --h1: 6rem;
+    --fs-big: 4rem;
+  }
+
+  .drum {
+    height: 13rem;
+    width: 13rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .drum {
+    height: 10rem;
+    width: 10rem;
+  }
+}
+
+@media (max-width: 466px) {
+  .drum {
+    height: 9rem;
+    width: 9rem;
+  }
+}
+
+@media (max-width: 466px) {
+  :root {
+    --fs-big: 3.5rem;
+  }
+
+  .drum {
+    height: 8rem;
+    width: 8rem;
+  }
+}
